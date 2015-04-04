@@ -1,0 +1,79 @@
+﻿@model CodeFirstEF6.Models.PeliculaViewModel
+
+@{
+    ViewBag.Title = "Eliminar Pelicula";
+}
+
+<h2>Eliminar Pelicula</h2>
+
+<h3>¿Esta seguro de Eliminar?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estreno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estreno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duracion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdGenero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdGenero)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Volver", "Index")
+            | <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    }
+</div>
